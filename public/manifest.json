@@ -1,0 +1,41 @@
+{
+  "name": "CarbonCalc",
+  "description" : "An extension to calculate the carbon emissions produced by your online activity",
+  "version": "1.0",
+  "manifest_version": 2,
+  "background":
+  {
+    "service_worker": "3.d1953c1f.chunk.js"
+  },
+  "browser_action":
+  {
+    "default_popup": "index.html",
+    "default_title": "Extension"
+  },
+  "icons":
+  {
+    "16": "logo192.png",
+    "48": "logo192.png",
+    "128": "logo192.png"
+  },
+  "web_accessible_resources": ["variables.html"],
+  "content_scripts":
+  [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["./static/js/content.js"],
+      "all_frames": true,
+      "run_at": "document_end"
+    }
+  ],
+  "permissions":
+  [
+    "activeTab",
+    "cookies",
+    "storage"
+  ],
+  "optional_permissions":
+  [
+    "<all_urls>"
+  ]
+}
