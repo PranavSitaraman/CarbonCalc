@@ -3,5 +3,5 @@
 ```
 $ yarn run build
 ```
-### Select `/build` folder for Chrome extentsion
+### Select `/build` folder for Chrome extension
 ### Video: https://youtu.be/kJPLOf8pkwk
